@@ -40,8 +40,8 @@ accuracy = accuracy_score(y_test,predictions)
 
 
 #mlflow
-mlflow.set_tracking_uri('sqlite:///C:\\Users\\igorg_000\\Desktop\\Petrobras_Intelipetro\\mlflow-master\\examples\\example_1_igor\\teste2.db')
-#mlflow.set_tracking_uri('mysql://root:@localhost/mlflow')
+#mlflow.set_tracking_uri('sqlite:///C:\\Users\\igorg_000\\Desktop\\Petrobras_Intelipetro\\mlflow-master\\examples\\example_1_igor\\teste2.db')
+mlflow.set_tracking_uri('mysql+pymysql://root:@localhost:3306/mlflow')
 
 mlflow.start_run()
 mlflow.log_metric("accuracy", accuracy)
